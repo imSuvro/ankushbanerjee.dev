@@ -21,6 +21,10 @@ module.exports = {
   compiler: {
     removeConsole: true,
   },
+  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
+    config.resolve.alias['styled-jsx'] = require.resolve('styled-jsx');
+    return config;
+  },
 };
 
 // const nextConfig = {
