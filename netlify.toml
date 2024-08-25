@@ -1,8 +1,7 @@
 [build]
-  command = "npm run dev"
-  publish = "out"
-  # Force a clean build
-  environment = { 
-    NODE_VERSION = "22.3.0",
-    NETLIFY_BUILD_DEBUG = "true"
-  }
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "v22.3.0"
+  NETLIFY_BUILD_DEBUG = "true"
