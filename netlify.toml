@@ -1,6 +1,8 @@
 [build]
   command = "npm run dev"
   publish = "out"
-
-[context.production.environment]
-  NODE_VERSION = "22.3.0"  # Replace with your local Node.js version
+  # Force a clean build
+  environment = { 
+    NODE_VERSION = "22.3.0",
+    NETLIFY_BUILD_DEBUG = "true"
+  }
